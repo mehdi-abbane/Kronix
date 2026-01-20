@@ -8,7 +8,7 @@ import MainButton from "./MainButton.astro"
   >
     <div class="flex items-center justify-between">
       <!-- Brand -->
-      <a href="/" class="text-2xl font-bold text-white">
+      <a href="/" class="text-2xl font-bold text-white" aria-label="Home">
         <span class="sr-only">Kronix home</span>
         <span aria-hidden="true">
           Kro<span class="text-[var(--lime)]">nix</span>
@@ -17,11 +17,11 @@ import MainButton from "./MainButton.astro"
 
       <!-- Primary navigation (desktop) -->
       <ul class="hidden md:flex items-center gap-6 text-white font-semibold">
-        <li><a href="/process">Process</a></li>
-        <li><a href="/benefits">Benefits</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/process" aria-label="Process">Process</a></li>
+        <li><a href="/benefits" aria-label="Benefits">Benefits</a></li>
+        <li><a href="/services" aria-label="Services">Services</a></li>
+        <li><a href="/portfolio" aria-label="Portfolio">Portfolio</a></li>
+        <li><a href="/faq" aria-label="FAQ">FAQ</a></li>
       </ul>
 
       <!-- Primary action (desktop) -->
@@ -67,10 +67,10 @@ import MainButton from "./MainButton.astro"
       class="md:hidden mt-4"
     >
       <ul class="flex flex-col gap-4 text-white font-semibold">
-        <li><a href="/process">Process</a></li>
-        <li><a href="/benefits">Benefits</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/process" aria-label="Process">Process</a></li>
+        <li><a href="/benefits" aria-label="Benefits">Benefits</a></li>
+        <li><a href="/services" aria-label="Services">Services</a></li>
+        <li><a href="/portfolio" aria-label="Portfolio">Portfolio</a></li>
         <li><a href="/faq">FAQ</a></li>
         <li>
           <MainButton href="/get-started">

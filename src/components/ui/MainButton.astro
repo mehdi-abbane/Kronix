@@ -1,7 +1,9 @@
 ---
-const {href, class: className} = Astro.props;
+const {href, class: className, ariaLabel} = Astro.props;
 ---
-<a
+<a 
+	
+	aria-label=`${ariaLabel ?? ""}`
 	href={href}
 	class=`main-button cursor-pointer transition-all duration-150 bg-[var(--lime)] text-[var(--dark)] px-6 py-3 rounded-lg hover:bg-transparent border-2 hover:border-[var(--lime)] hover:text-[var(--lime)] ${className ?? ''}`
 	>

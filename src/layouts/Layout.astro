@@ -1,14 +1,17 @@
 ---
 import './../assets/css/global.css'
+const {title="KRONIX", description= "Unlimited design requests, fast turnaround, and senior designers on demand. Cancel anytime."} = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
 	<head>
+		<meta name="description" content={description}/>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="cronical" href={Astro.url.href}/>
 		<meta name="generator" content={Astro.generator} />
-		<title>KRONIX</title>
+		<title>{title}</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
