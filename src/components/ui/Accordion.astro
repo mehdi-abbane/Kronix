@@ -11,8 +11,8 @@ import Image from 'astro/components/Image.astro'
       aria-expanded="false"
       aria-controls="faq1"
       tabindex="0"
-      @click="open = !open; $el.setAttribute('aria-expanded', open)"
-      @keydown.enter.space.prevent="open = !open; $el.setAttribute('aria-expanded', open)"
+      @click="open = !open;"
+      @keydown.enter.space.prevent="open = !open;"
     >
       <h6 class="text-white font-bold" id="faq1-label">
         Do you have specific pricing plans to show?
@@ -20,7 +20,7 @@ import Image from 'astro/components/Image.astro'
       <button
         class="bg-[var(--lime)] p-3 w-[32px] h-[32px] rounded-full flex items-center rotate-90"
         :class="open && 'rotate-180'"
-        aria-hidden="true"
+        
       >
         <Image src={arrow} alt="Arrow icon" loading="lazy" decoding="async" />
       </button>
@@ -48,8 +48,8 @@ import Image from 'astro/components/Image.astro'
       aria-expanded="false"
       aria-controls="faq2"
       tabindex="0"
-      @click="open = !open; $el.setAttribute('aria-expanded', open)"
-      @keydown.enter.space.prevent="open = !open; $el.setAttribute('aria-expanded', open)"
+      @click="open = !open;"
+      @keydown.enter.space.prevent="open = !open;"
     >
       <h6 class="text-white font-bold" id="faq2-label">
         How many years of experience do you have?
@@ -57,7 +57,7 @@ import Image from 'astro/components/Image.astro'
       <button
         class="bg-[var(--lime)] p-3 w-[32px] h-[32px] rounded-full flex items-center rotate-90"
         :class="open && 'rotate-180'"
-        aria-hidden="true"
+        
       >
         <Image src={arrow} alt="Arrow icon" loading="lazy" decoding="async" />
       </button>
@@ -85,8 +85,8 @@ import Image from 'astro/components/Image.astro'
       aria-expanded="false"
       aria-controls="faq3"
       tabindex="0"
-      @click="open = !open; $el.setAttribute('aria-expanded', open)"
-      @keydown.enter.space.prevent="open = !open; $el.setAttribute('aria-expanded', open)"
+      @click="open = !open;"
+      @keydown.enter.space.prevent="open = !open;"
     >
       <h6 class="text-white font-bold" id="faq3-label">
         What companies have you worked with?
@@ -94,7 +94,7 @@ import Image from 'astro/components/Image.astro'
       <button
         class="bg-[var(--lime)] p-3 w-[32px] h-[32px] rounded-full flex items-center rotate-90"
         :class="open && 'rotate-180'"
-        aria-hidden="true"
+        
       >
         <Image src={arrow} alt="Arrow icon" loading="lazy" decoding="async" />
       </button>
@@ -122,8 +122,8 @@ import Image from 'astro/components/Image.astro'
       aria-expanded="false"
       aria-controls="faq4"
       tabindex="0"
-      @click="open = !open; $el.setAttribute('aria-expanded', open)"
-      @keydown.enter.space.prevent="open = !open; $el.setAttribute('aria-expanded', open)"
+      @click="open = !open;"
+      @keydown.enter.space.prevent="open = !open;"
     >
       <h6 class="text-white font-bold" id="faq4-label">
         Am I safe leaving my company in your hands?
@@ -131,7 +131,7 @@ import Image from 'astro/components/Image.astro'
       <button
         class="bg-[var(--lime)] p-3 w-[32px] h-[32px] rounded-full flex items-center rotate-90"
         :class="open && 'rotate-180'"
-        aria-hidden="true"
+        
       >
         <Image src={arrow} alt="Arrow icon" loading="lazy" decoding="async" />
       </button>
