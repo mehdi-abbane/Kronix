@@ -6,6 +6,7 @@ import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://kronix-project.netlify.app",
   vite: {
     plugins: [tailwindcss()],
     resolve: {
@@ -14,7 +15,5 @@ export default defineConfig({
       },
     },
   },
-
   integrations: [alpinejs()],
 });
-
