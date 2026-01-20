@@ -1,6 +1,7 @@
 ---
 import rectangleSvg from '@/assets/images/logos/rectangle.svg';
 import MainButton from '../../ui/MainButton.astro';
+import Image from 'astro/components/Image.astro';
 ---
 <section
   class="hero-section flex flex-col items-center justify-center gap-10 text-center mb-10"
@@ -32,11 +33,12 @@ import MainButton from '../../ui/MainButton.astro';
     class="flex items-center gap-3 text-gray-200"
     aria-label="Trusted by brands"
   >
+  <Image src={rectangleSvg} alt='Green line icon' decoding='async' loading="lazy"/>
     <img src={rectangleSvg.src} alt="" aria-hidden="true" />
     <p>
       <strong>Trusted by amazing brands</strong>
     </p>
-    <img src={rectangleSvg.src} alt="" aria-hidden="true" />
+  <Image src={rectangleSvg} alt='Green line icon' decoding='async' loading="lazy"/>
   </aside>
 
   <!-- Structured Data for SEO -->
