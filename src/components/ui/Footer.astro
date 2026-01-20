@@ -1,0 +1,66 @@
+---
+import Image from "astro/components/Image.astro"
+import emailSvg from '@/assets/images/email.svg'
+import phoneSvg from '@/assets/images/phone.svg'
+import fbSvg from '@/assets/images/fb.svg'
+import igSvg from '@/assets/images/ig.svg'
+import liSvg from '@/assets/images/linkedin.svg'
+import dribbleSvg from '@/assets/images/basketball.svg'
+---
+<footer class="relative">
+	<div class="flex flex-col p-10">
+		<div class="flex gap-5 mb-5 justify-between">
+			<div>
+				<span class="font-bold text-xl md:text-2xl lg:text-4xl text-white">Kro<span class="text-[var(--lime)]">nix</span></span>
+				<p class="text-white">Kornix - the leading digital agency based in <br/> the UK, working with top-tier clients, <br/> from start-ups to enterprises.</p>
+			</div>
+			<div class="flex flex-col gap-5">
+
+				<div class="flex text-white">
+					<Image src={emailSvg} alt='Email Icon Svg' decoding='async' loading='lazy' class='mr-2'/>
+					<p>info@kronix.com</p>
+				</div>
+
+				<div class="flex text-white">
+					<Image src={phoneSvg} alt='phone Icon Svg' decoding='async' loading='lazy' class='mr-2'/>
+					<p>(001)12313435</p>
+
+				</div>
+				<ul class="flex gap-3">
+					<li>
+						<a href="">
+							<Image src={fbSvg} alt='Facebook icon' decoding='async' loading='lazy'/>	
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<Image src={igSvg} alt='Instagram icon' decoding='async' loading='lazy'/>	
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<Image src={liSvg} alt='Dribble icon' decoding='async' loading='lazy'/>	
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<Image src={dribbleSvg} alt='Dribble icon' decoding='async' loading='lazy'/>	
+						</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<div class="border-t-1 border-white p-10 text-white flex justify-between">
+			<ul class=" flex justify-start gap-5">
+				<li><a href="">Process</a></li>
+				<li><a href="">Benifits</a></li>
+				<li><a href="">Services</a></li>
+				<li><a href="">Portfolio</a></li>
+				<li><a href="">FAQ</a></li>
+			</ul>
+
+			<p >© 2023 shantogfx - All Right Reserved</p>
+		</div>
+	</div>
+</footer>

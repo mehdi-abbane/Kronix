@@ -1,11 +1,101 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Footer from '../components/ui/Footer.astro';
+import NavBar from '../components/ui/NavBar.astro'
+import Hero from '../components/sections/Hero/Hero.astro'
+import Trusted from '../components/sections/Hero/Trusted.astro'
+import Process from '../components/sections/Process/Process.astro'
+import Gallery from '../components/sections/Projects/Gallery.astro'
+import {default as CapabilitiesHeading} from '../components/sections/Capabilities/Header.astro'
+import {default as CapabilitiesCards} from '../components/sections/Capabilities/Cards.astro'
+import Benifits from '../components/sections/Capabilities/Benifits.astro'
+import  Capabilities from '../components/sections/Capabilities/Capabilities.astro'
+import Testimonial from '../components/sections/Testimonial/Testimonial.astro'
+import {default as PricingHeading} from '../components/sections/Pricing/Heading.astro'
+import {default as PricingCards } from '../components/sections/Pricing/Cards.astro'
+import Blogs from '../components/sections/Pricing/Blogs.astro';
+import Accordion from '../components/ui/Accordion.astro'
+import Form from '../components/ui/Form.astro'
 ---
 
 <Layout>
-	<Welcome />
+<NavBar/>
+<main id="main-content" class="bg-[var(--dark)]">
+	<div class="p-4 md:px-20 md:py-5 ">
+		<Hero />
+		<Trusted />
+		<Process />
+
+	</div>
+	<section aria-labelledby="our-work" class="flex flex-col gap-4 bg-white p-5">
+		<header class="flex flex-col gap-4 justify-center items-center">
+			<h2 id="works-title" class="font-bold text-xl md:text-2xl lg:text-4xl">
+				Our beautiful works
+			</h2>
+
+			<p class="text-center">
+			We help our clients grow their <br/>bottom-line with clear and professional websites.
+			</p>
+
+			<a
+				href="/portfolio"
+				class="px-4 py-2 border-1 rounded-lg inline-block w-fit"
+				>
+				Load more
+			</a>
+		</header>
+
+		<Gallery/>
+	</section>
+	<section aria-labelledby="our-capabilities" class="py-10 p-4 md:px-20 md:py-5 flex flex-col gap-10">
+		<CapabilitiesHeading/>
+		<CapabilitiesCards/>
+		<Benifits/>	
+		<Capabilities/>
+	</section>
+
+	<Testimonial/>
+	<section class="p-1 md:px-10 flex flex-col gap-10 md:p-10">
+		<PricingHeading/>
+		<PricingCards/>
+
+		<header
+			aria-labelledby="pricing-title"
+			class="pricing-header text-center flex flex-col gap-5 mb-10"
+			>
+			<!-- Section label -->
+			<p
+			class="section-label text-sm font-semibold text-lime-400 text-center"
+			>
+			BLOGS
+			</p>
+
+			<!-- Main heading -->
+			<h2
+				id="pricing-title"
+				class="text-3xl md:text-5xl font-bold text-center text-white"
+				>
+				News & Articles
+			</h2>
+
+				<!-- Supporting paragraph -->
+				<p class="text-gray-200 max-w-prose mx-auto">
+				Best Articles to get started
+				</p>
+		</header>
+		<Blogs/>
+		<button class="px-8 py-4 border-2 border-[var(--lime)] font-bold text-[var(--lime)] w-fit mx-auto rounded-lg my-10">LOAD MORE</button>
+
+	</section>
+	<section class="py-10 bg-white px-1 md:px-50  mb-50">
+		<header class="flex flex-col gap-3 text-center mb-10">
+			<h3 class="font-bold text-[var(--dark)] text-lg md:text-2xl lg:text-4xl">FAQ's</h3>
+			<p class="text-gray-500">Providing answers to your questions</p>
+		</header>
+		<Accordion/>
+		<Form/>
+	</section>
+	<Footer/>
+</main>
+
 </Layout>

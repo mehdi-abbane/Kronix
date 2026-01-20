@@ -1,0 +1,179 @@
+---
+import gymstory from '@/assets/images/gymstory.svg'
+import Image from 'astro/components/Image.astro'
+import person1 from '@/assets/images/person-1.png'
+import arrow from '@/assets/images/arrow.svg'
+---
+<section
+  class="bg-white py-20 px-5 sm:px-10 md:px-20"
+  aria-labelledby="testimonials-title"
+>
+  <!-- Header -->
+  <header class="flex flex-col gap-4 text-center mb-10">
+    <p class="text-sm tracking-wide">TESTIMONIALS</p>
+
+    <h2
+      id="testimonials-title"
+      class="font-bold text-xl sm:text-2xl lg:text-3xl"
+    >
+      Customer is our top <br /> priority
+    </h2>
+
+    <p class="max-w-prose mx-auto text-sm sm:text-base">
+      We survey all of our clients — the results go directly to our CEO.
+    </p>
+  </header>
+
+  <!-- Slider + buttons wrapper -->
+  <div class="relative">
+    <!-- Slider viewport -->
+    <div
+      class="overflow-hidden relative"
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Customer testimonials"
+    >
+      <ul
+        class="flex transition-transform duration-500 ease-out"
+        role="list"
+        data-slider
+      >
+        <!-- Slide 1 -->
+        <li class="min-w-full px-4 sm:px-6 md:px-10" role="group" aria-roledescription="slide" aria-label="Testimonial 1 of 3">
+          <article class="flex flex-col md:flex-row justify-between bg-[#D9D9D9] p-5 rounded-[35px] gap-5 md:gap-10">
+            <div class="flex flex-col gap-5 max-w-prose md:flex-1">
+              <Image src={gymstory} alt="Gymstory company logo" loading="lazy" decoding="async" />
+              <h3 class="font-bold text-[var(--S2)] text-lg sm:text-xl md:text-2xl">
+                Kornix is the best digital agency I have ever worked with
+              </h3>
+              <p class="text-[var(--dark)] opacity-75 text-sm sm:text-base">
+                Kornix brought our ideas to life with clarity and precision.
+                Communication was smooth, delivery was fast, and the quality exceeded expectations.
+              </p>
+              <address class="not-italic text-sm sm:text-base">
+                <p class="font-bold">Diana Loreza</p>
+                <p>Director of <strong>Gymstory</strong></p>
+              </address>
+            </div>
+            <Image
+              src={person1}
+              alt="Portrait of Diana Loreza"
+              class="w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 object-cover rounded-full"
+              loading="lazy"
+              decoding="async"
+            />
+          </article>
+        </li>
+
+        <!-- Slide 2 -->
+        <li class="min-w-full px-4 sm:px-6 md:px-10" role="group" aria-roledescription="slide" aria-label="Testimonial 2 of 3">
+          <article class="flex flex-col md:flex-row justify-between bg-[#D9D9D9] p-5 rounded-[35px] gap-5 md:gap-10">
+            <div class="flex flex-col gap-5 max-w-prose md:flex-1">
+              <Image src={gymstory} alt="Bluegreen company logo" loading="lazy" decoding="async" />
+              <h3 class="font-bold text-[var(--S2)] text-lg sm:text-xl md:text-2xl">
+                Fast delivery, strong design sense, zero friction
+              </h3>
+              <p class="text-[var(--dark)] opacity-75 text-sm sm:text-base">
+                Kornix delivered polished, on-brand assets at speed. The subscription model removes friction and makes planning easy.
+              </p>
+              <address class="not-italic text-sm sm:text-base">
+                <p class="font-bold">Michael Trent</p>
+                <p>Head of <strong>Bluegreen</strong></p>
+              </address>
+            </div>
+            <Image
+              src={person1}
+              alt="Portrait of Michael Trent"
+              class="w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 object-cover rounded-full"
+              loading="lazy"
+              decoding="async"
+            />
+          </article>
+        </li>
+
+        <!-- Slide 3 -->
+        <li class="min-w-full px-4 sm:px-6 md:px-10" role="group" aria-roledescription="slide" aria-label="Testimonial 3 of 3">
+          <article class="flex flex-col md:flex-row justify-between bg-[#D9D9D9] p-5 rounded-[35px] gap-5 md:gap-10">
+            <div class="flex flex-col gap-5 max-w-prose md:flex-1">
+              <Image src={gymstory} alt="Key Insights logo" loading="lazy" decoding="async" />
+              <h3 class="font-bold text-[var(--S2)] text-lg sm:text-xl md:text-2xl">
+                Professional, scalable, and genuinely easy to work with
+              </h3>
+              <p class="text-[var(--dark)] opacity-75 text-sm sm:text-base">
+                Kornix understands business context, not just visuals. Every decision felt intentional and aligned with our goals.
+              </p>
+              <address class="not-italic text-sm sm:text-base">
+                <p class="font-bold">Sarah Collins</p>
+                <p>Product Manager at <strong>Key Insights</strong></p>
+              </address>
+            </div>
+            <Image
+              src={person1}
+              alt="Portrait of Sarah Collins"
+              class="w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 object-cover rounded-full"
+              loading="lazy"
+              decoding="async"
+            />
+          </article>
+        </li>
+      </ul>
+
+      <!-- Controls CENTERED vertically -->
+      <button
+        type="button"
+        data-prev
+        aria-label="Previous testimonial"
+        class="absolute top-1/2 left-2 -translate-y-1/2 z-10 p-2 rounded-full shadow pointer-events-auto"
+      >
+        <Image src={arrow} alt="Previous" loading="lazy" decoding="async" />
+      </button>
+      <button
+        type="button"
+        data-next
+        aria-label="Next testimonial"
+        class="absolute top-1/2 right-2 -translate-y-1/2 z-10 p-2 rounded-full shadow pointer-events-auto"
+      >
+        <Image src={arrow} alt="Next" loading="lazy" decoding="async" class="rotate-180" />
+      </button>
+    </div>
+  </div>
+
+  <!-- SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kornix",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "3"
+    }
+  }
+  </script>
+</section>
+
+<!-- Slider JS -->
+<script>
+  const slider = document.querySelector('[data-slider]');
+  const slides = slider.children;
+  const next = document.querySelector('[data-next]');
+  const prev = document.querySelector('[data-prev]');
+
+  let index = 0;
+
+  function update() {
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  next.onclick = () => {
+    index = (index + 1) % slides.length;
+    update();
+  };
+
+  prev.onclick = () => {
+    index = (index - 1 + slides.length) % slides.length;
+    update();
+  };
+</script>
+

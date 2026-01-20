@@ -1,0 +1,64 @@
+---
+import Image from "astro/components/Image.astro"
+import branding from '@/assets/images/branding.png'
+import fb from '@/assets/images/fb.png'
+import ai from '@/assets/images/ai.png'
+import logo from '@/assets/images/logo-design.png'
+import nft from '@/assets/images/nft.png'
+import tiktok from '@/assets/images/tik-tok.png'
+---
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-5">
+	<li class="flex border-2 rounded-[16px] border-[var(--lime)]">
+		<Image src={branding} alt='Branding Image' loading='lazy' decoding='async'/>
+		<div class="p-5 flex flex-col gap-5 " style="border-left-color: transparent">
+			<span class="font-bold text-[var(--lime)]">BRANDING</span>
+			<h4 class="font-bold text-white">What is the branding,<br/> and what we need it ?</h4>
+			<p class="text-gray-200">On the other hand, we denounce with <br/> righteous indgnation and...</p>
+		</div>
+	</li>
+
+	<li class="flex border-2 rounded-[16px] border-[var(--lime)]">
+		<Image src={fb} alt='Branding Image' loading='lazy' decoding='async'/>
+		<div class="p-5 flex flex-col gap-5 " style="border-left-color: transparent">
+			<span class="font-bold text-[var(--lime)]">FB</span>
+			<h4 class="font-bold text-white">What is the branding,<br/> and what we need it ?</h4>
+			<p class="text-gray-200">On the other hand, we denounce with <br/> righteous indgnation and...</p>
+		</div>
+	</li>
+
+	<li class="flex border-2 rounded-[16px] border-[var(--lime)]">
+		<Image src={ai} alt='Branding Image' loading='lazy' decoding='async'/>
+		<div class="p-5 flex flex-col gap-5 " style="border-left-color: transparent">
+			<span class="font-bold text-[var(--lime)]">AI</span>
+			<h4 class="font-bold text-white">What is the branding,<br/> and what we need it ?</h4>
+			<p class="text-gray-200">On the other hand, we denounce with <br/> righteous indgnation and...</p>
+		</div>
+	</li>
+
+	<li class="flex border-2 rounded-[16px] border-[var(--lime)]">
+		<Image src={logo} alt='Branding Image' loading='lazy' decoding='async'/>
+		<div class="p-5 flex flex-col gap-5 " style="border-left-color: transparent">
+			<span class="font-bold text-[var(--lime)]">LOGO DESIGN</span>
+			<h4 class="font-bold text-white">What is the branding,<br/> and what we need it ?</h4>
+			<p class="text-gray-200">On the other hand, we denounce with <br/> righteous indgnation and...</p>
+		</div>
+	</li>
+
+	<li class="flex border-2 rounded-[16px] border-[var(--lime)]">
+		<Image src={nft} alt='Branding Image' loading='lazy' decoding='async'/>
+		<div class="p-5 flex flex-col gap-5 " style="border-left-color: transparent">
+			<span class="font-bold text-[var(--lime)]">NFT</span>
+			<h4 class="font-bold text-white">What is the branding,<br/> and what we need it ?</h4>
+			<p class="text-gray-200">On the other hand, we denounce with <br/> righteous indgnation and...</p>
+		</div>
+	</li>
+
+	<li class="flex border-2 rounded-[16px] border-[var(--lime)]">
+		<Image src={tiktok} alt='Branding Image' loading='lazy' decoding='async'/>
+		<div class="p-5 flex flex-col gap-5 " style="border-left-color: transparent">
+			<span class="font-bold text-[var(--lime)]">TKTOK</span>
+			<h4 class="font-bold text-white">What is the branding,<br/> and what we need it ?</h4>
+			<p class="text-gray-200">On the other hand, we denounce with <br/> righteous indgnation and...</p>
+		</div>
+	</li>
+</ul>

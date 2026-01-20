@@ -1,0 +1,57 @@
+---
+import rectangleSvg from '@/assets/images/logos/rectangle.svg';
+import MainButton from '../../ui/MainButton.astro';
+---
+<section
+  class="hero-section flex flex-col items-center justify-center gap-10 text-center mb-10"
+  aria-labelledby="hero-title"
+>
+  <header>
+    <h1
+      id="hero-title"
+      class="hero-title font-bold leading-tight text-white text-3xl md:text-5xl lg:text-7xl relative"
+    >
+      Bringing Your
+      <span class="block">Dream Into</span>
+      <span class="reality-word text-[var(--lime)]">Reality</span>
+    </h1>
+  </header>
+
+  <p class="hero-para max-w-prose text-base text-gray-200 md:text-lg">
+    We increase revenue and ensure sustainable long-term growth for your business
+    through powerful Webflow websites.
+  </p>
+
+  <nav aria-label="Primary call to action">
+    <a href="/book-meeting" class="inline-block w-fit">
+      <MainButton>Book a Meeting</MainButton>
+    </a>
+  </nav>
+
+  <aside
+    class="flex items-center gap-3 text-gray-200"
+    aria-label="Trusted by brands"
+  >
+    <img src={rectangleSvg.src} alt="" aria-hidden="true" />
+    <p>
+      <strong>Trusted by amazing brands</strong>
+    </p>
+    <img src={rectangleSvg.src} alt="" aria-hidden="true" />
+  </aside>
+
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPageElement",
+    "name": "Hero Section",
+    "description": "Bringing your dream into reality with high-performing Webflow websites. Trusted by leading brands."
+  }
+  </script>
+</section>
+
+<script>
+  import { heroAnimation } from '@/assets/js/animations';
+  heroAnimation();
+</script>
+

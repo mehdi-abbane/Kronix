@@ -1,0 +1,44 @@
+---
+import MainButton from "../../ui/MainButton.astro"
+---
+
+<header class="flex flex-col gap-3 md:flex-row mb-20" aria-labelledby="benefits-title">
+  <div class="md:flex-1">
+    <p class="small-tag text-sm font-semibold text-lime-400">
+      BENEFITS
+    </p>
+
+    <h2
+      id="benefits-title"
+      class="text-white text-3xl md:text-5xl font-bold"
+    >
+      The design subscription <br />
+      that connects you to your <br />
+      dream team
+    </h2>
+  </div>
+
+  <div class="content flex flex-col flex-1">
+    <p class="text-gray-200 text-xl mb-10">
+      A subscription can alleviate the stress of staffing,<br />
+      managing expenses, or make design calls like a Creative Director.<br />
+      We partner with you to ensure that your design elevates your brand to new levels.
+    </p>
+
+    <nav aria-label="Benefits call to action">
+      <MainButton href="/pricing" class="inline-block w-fit">
+        See pricing
+      </MainButton>
+    </nav>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPageElement",
+    "name": "Benefits Section",
+    "description": "The design subscription that connects you to your dream team, helping brands scale design without staffing stress."
+  }
+  </script>
+</header>
+

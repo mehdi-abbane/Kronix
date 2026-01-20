@@ -1,0 +1,204 @@
+---
+import MainButton from '../../ui/MainButton.astro'
+---
+
+  <ul class="flex flex-col md:flex-row gap-10 justify-center" role="list">
+    <!-- Plan 1: Standard -->
+    <li role="listitem">
+      <article
+        class="bg-[var(--dark-2)] p-10 rounded-xl border border-lime-100"
+        itemscope
+        itemtype="https://schema.org/Product"
+      >
+        <header class="flex gap-4 items-center mb-6">
+          <h3 class="text-white font-bold text-xl" itemprop="name">Standard</h3>
+          <span class="bg-[var(--lime)] px-5 py-2 rounded-md text-[var(--dark-2)]">Most Popular</span>
+        </header>
+
+        <p class="text-gray-200 my-6" itemprop="description">
+          One request at a time. For companies who need on-going design support.
+        </p>
+
+        <div class="p-5 border-t border-b border-[var(--lime)] mb-6">
+          <p class="text-[var(--lime)] text-2xl md:text-3xl lg:text-4xl font-bold" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <span itemprop="priceCurrency" content="USD">$</span>
+            <span itemprop="price" content="2995">2,995</span>/m
+          </p>
+          <p class="text-gray-200">Pause or cancel anytime</p>
+        </div>
+
+        <ul class="flex flex-col p-3 font-bold text-white mb-6">
+          <li>1x Active task at a time</li>
+          <li>Unlimited revisions</li>
+          <li>Dedicated project manager</li>
+          <li>Daily comms through Slack</li>
+          <li>Work with senior designers</li>
+          <li>2-3 days turnaround time</li>
+          <li>Top-tier design</li>
+        </ul>
+
+        <div class="flex flex-col gap-5 font-bold text-center">
+          <a
+            href="/book-a-call"
+            class="border border-[var(--lime)] px-6 py-3 rounded-lg text-white"
+            itemprop="url"
+          >
+            Book a call
+          </a>
+          <MainButton
+            href="/click-to-buy"
+            class:list="border border-[var(--lime)]"
+            itemprop="url"
+          >
+            Click to buy
+          </MainButton>
+        </div>
+      </article>
+    </li>
+
+    <!-- Plan 2: Growth -->
+    <li role="listitem">
+      <article
+        class="bg-[var(--dark-2)] p-10 rounded-xl border border-lime-100 pricing-card-2 relative"
+        itemscope
+        itemtype="https://schema.org/Product"
+      >
+        <header class="flex gap-4 items-center mb-6">
+          <h3 class="text-white font-bold text-xl" itemprop="name">Growth</h3>
+          <span class="bg-white px-5 py-2 rounded-md text-[var(--dark-2)]">Best value</span>
+        </header>
+
+        <p class="text-gray-200 my-6" itemprop="description">
+          Double the requests. For companies with increasing design needs. Limited spots.
+        </p>
+
+        <div class="p-5 border-t border-b border-[var(--lime)] mb-6">
+          <p class="text-[var(--lime)] text-2xl md:text-3xl lg:text-4xl font-bold" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <span itemprop="priceCurrency" content="USD">$</span>
+            <span itemprop="price" content="4795">4,795</span>
+          </p>
+          <p class="text-gray-200">Pause or cancel anytime</p>
+        </div>
+
+        <ul class="flex flex-col p-3 font-bold text-white mb-6">
+          <li><span class="text-[var(--lime)]">2x Active tasks</span> at a time</li>
+          <li>Unlimited revisions</li>
+          <li>Dedicated project manager</li>
+          <li>Daily comms through Slack</li>
+          <li>Work with senior designers</li>
+          <li>2-3 days turnaround time</li>
+          <li>Top-tier design</li>
+        </ul>
+
+        <div class="flex flex-col gap-5 font-bold text-center">
+          <a
+            href="/book-a-call"
+            class="border border-[var(--lime)] px-6 py-3 rounded-lg text-white"
+            itemprop="url"
+          >
+            Book a call
+          </a>
+          <MainButton
+            href="/click-to-buy"
+            class:list="border border-[var(--lime)]"
+            itemprop="url"
+          >
+            Click to buy
+          </MainButton>
+        </div>
+      </article>
+    </li>
+
+    <!-- Plan 3: Basic -->
+    <li role="listitem">
+      <article
+        class="bg-[var(--dark-2)] p-10 rounded-xl border border-lime-100"
+        itemscope
+        itemtype="https://schema.org/Product"
+      >
+        <header class="flex gap-4 items-center mb-6">
+          <h3 class="text-white font-bold text-xl" itemprop="name">Basic - Weekly</h3>
+        </header>
+
+        <p class="text-gray-200 my-6" itemprop="description">
+          Perfect if you want to try the subscription out or only have a few one-off tasks.
+        </p>
+
+        <div class="p-5 border-t border-b border-[var(--lime)] mb-6">
+          <p class="text-[var(--lime)] text-2xl md:text-3xl lg:text-4xl font-bold" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <span itemprop="priceCurrency" content="USD">$</span>
+            <span itemprop="price" content="890">890</span>/m
+          </p>
+          <p class="text-gray-200">Pause or cancel anytime</p>
+        </div>
+
+        <ul class="flex flex-col p-3 font-bold text-white mb-6">
+          <li>Fixed scope of work</li>
+          <li>2 rounds of revisions</li>
+          <li>Dedicated project manager</li>
+          <li>Daily comms through Slack</li>
+          <li>1x designer</li>
+          <li>2-5 days turnaround time</li>
+          <li>Top-tier design</li>
+        </ul>
+
+        <div class="flex flex-col gap-5 font-bold text-center">
+          <a
+            href="/book-a-call"
+            class="border border-[var(--lime)] px-6 py-3 rounded-lg text-white"
+            itemprop="url"
+          >
+            Book a call
+          </a>
+          <MainButton
+            href="/click-to-buy"
+            class:list="border border-[var(--lime)]"
+            itemprop="url"
+          >
+            Click to buy
+          </MainButton>
+        </div>
+      </article>
+    </li>
+  </ul>
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "Product",
+      "name": "Standard",
+      "description": "One request at a time. For companies who need on-going design support.",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "2995"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Growth",
+      "description": "Double the requests. For companies with increasing design needs. Limited spots.",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "4795"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Basic - Weekly",
+      "description": "Perfect if you want to try the subscription out or only have a few one-off tasks.",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "890"
+      }
+    }
+  ]
+}
+</script>
+

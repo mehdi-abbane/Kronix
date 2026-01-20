@@ -1,0 +1,154 @@
+---
+import arrow from '@/assets/images/arrow.svg'
+import Image from 'astro/components/Image.astro'
+---
+<ul class="  flex flex-col gap-5 mb-10">
+  <!-- FAQ Item 1 -->
+  <li class="flex flex-col bg-[var(--dark)] rounded-[35px]" x-data="{ open: false }">
+    <div
+      class="flex gap-4 items-center justify-between p-5"
+      role="button"
+      aria-expanded="false"
+      aria-controls="faq1"
+      tabindex="0"
+      @click="open = !open; $el.setAttribute('aria-expanded', open)"
+      @keydown.enter.space.prevent="open = !open; $el.setAttribute('aria-expanded', open)"
+    >
+      <h6 class="text-white font-bold" id="faq1-label">
+        Do you have specific pricing plans to show?
+      </h6>
+      <button
+        class="bg-[var(--lime)] p-3 w-[32px] h-[32px] rounded-full flex items-center rotate-90"
+        :class="open && 'rotate-180'"
+        aria-hidden="true"
+      >
+        <Image src={arrow} alt="Arrow icon" loading="lazy" decoding="async" />
+      </button>
+    </div>
+    <div
+      id="faq1"
+      class="p-5 text-white"
+      x-show="open"
+      x-cloak
+      role="region"
+      aria-labelledby="faq1-label"
+    >
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni sequi,
+      beatae nulla amet quos porro, dignissimos perferendis tempora voluptas
+      possimus ipsam natus consequuntur repellendus ut esse quisquam nesciunt
+      ad! Ipsum.
+    </div>
+  </li>
+
+  <!-- FAQ Item 2 -->
+  <li class="flex flex-col bg-[var(--dark)] rounded-[35px]" x-data="{ open: false }">
+    <div
+      class="flex gap-4 items-center justify-between p-5"
+      role="button"
+      aria-expanded="false"
+      aria-controls="faq2"
+      tabindex="0"
+      @click="open = !open; $el.setAttribute('aria-expanded', open)"
+      @keydown.enter.space.prevent="open = !open; $el.setAttribute('aria-expanded', open)"
+    >
+      <h6 class="text-white font-bold" id="faq2-label">
+        How many years of experience do you have?
+      </h6>
+      <button
+        class="bg-[var(--lime)] p-3 w-[32px] h-[32px] rounded-full flex items-center rotate-90"
+        :class="open && 'rotate-180'"
+        aria-hidden="true"
+      >
+        <Image src={arrow} alt="Arrow icon" loading="lazy" decoding="async" />
+      </button>
+    </div>
+    <div
+      id="faq2"
+      class="p-5 text-white"
+      x-show="open"
+      x-cloak
+      role="region"
+      aria-labelledby="faq2-label"
+    >
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni sequi,
+      beatae nulla amet quos porro, dignissimos perferendis tempora voluptas
+      possimus ipsam natus consequuntur repellendus ut esse quisquam nesciunt
+      ad! Ipsum.
+    </div>
+  </li>
+
+  <!-- FAQ Item 3 -->
+  <li class="flex flex-col bg-[var(--dark)] rounded-[35px]" x-data="{ open: false }">
+    <div
+      class="flex gap-4 items-center justify-between p-5"
+      role="button"
+      aria-expanded="false"
+      aria-controls="faq3"
+      tabindex="0"
+      @click="open = !open; $el.setAttribute('aria-expanded', open)"
+      @keydown.enter.space.prevent="open = !open; $el.setAttribute('aria-expanded', open)"
+    >
+      <h6 class="text-white font-bold" id="faq3-label">
+        What companies have you worked with?
+      </h6>
+      <button
+        class="bg-[var(--lime)] p-3 w-[32px] h-[32px] rounded-full flex items-center rotate-90"
+        :class="open && 'rotate-180'"
+        aria-hidden="true"
+      >
+        <Image src={arrow} alt="Arrow icon" loading="lazy" decoding="async" />
+      </button>
+    </div>
+    <div
+      id="faq3"
+      class="p-5 text-white"
+      x-show="open"
+      x-cloak
+      role="region"
+      aria-labelledby="faq3-label"
+    >
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni sequi,
+      beatae nulla amet quos porro, dignissimos perferendis tempora voluptas
+      possimus ipsam natus consequuntur repellendus ut esse quisquam nesciunt
+      ad! Ipsum.
+    </div>
+  </li>
+
+  <!-- FAQ Item 4 -->
+  <li class="flex flex-col bg-[var(--dark)] rounded-[35px]" x-data="{ open: false }">
+    <div
+      class="flex gap-4 items-center justify-between p-5"
+      role="button"
+      aria-expanded="false"
+      aria-controls="faq4"
+      tabindex="0"
+      @click="open = !open; $el.setAttribute('aria-expanded', open)"
+      @keydown.enter.space.prevent="open = !open; $el.setAttribute('aria-expanded', open)"
+    >
+      <h6 class="text-white font-bold" id="faq4-label">
+        Am I safe leaving my company in your hands?
+      </h6>
+      <button
+        class="bg-[var(--lime)] p-3 w-[32px] h-[32px] rounded-full flex items-center rotate-90"
+        :class="open && 'rotate-180'"
+        aria-hidden="true"
+      >
+        <Image src={arrow} alt="Arrow icon" loading="lazy" decoding="async" />
+      </button>
+    </div>
+    <div
+      id="faq4"
+      class="p-5 text-white"
+      x-show="open"
+      x-cloak
+      role="region"
+      aria-labelledby="faq4-label"
+    >
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni sequi,
+      beatae nulla amet quos porro, dignissimos perferendis tempora voluptas
+      possimus ipsam natus consequuntur repellendus ut esse quisquam nesciunt
+      ad! Ipsum.
+    </div>
+  </li>
+</ul>
+

@@ -1,0 +1,117 @@
+---
+import Image from "astro/components/Image.astro";
+import edo from '@/assets/gallery/EDO_square.png';
+import keyinsights from '@/assets/gallery/key-insights.png';
+import mapsquare from '@/assets/gallery/map-square.png';
+import oxfam from '@/assets/gallery/oxfam-appeal-square.png';
+import rwhsquare from '@/assets/gallery/RWH_square_04.png';
+import uatp from '@/assets/gallery/unwrapped-animated-thumbnail-poster.png';
+import whps from '@/assets/gallery/welcome-home-project-square.png';
+import adersquare from '@/assets/gallery/Ader-square.png';
+import bluegreen from '@/assets/gallery/bluegreen-square.png';
+import cvgt from '@/assets/gallery/cvgt-square.png';
+import dfat from '@/assets/gallery/dfat-poster.png';
+import dropbottle from '@/assets/gallery/dropbottle-square.png';
+---
+<section
+  aria-labelledby="portfolio-gallery-title"
+  class="my-10"
+>
+  <h2 id="portfolio-gallery-title" class="sr-only">
+    Selected portfolio works
+  </h2>
+
+  <ul class="flex gap-10 flex-col md:flex-row">
+    <li>
+      <article class="flex flex-col gap-10 translate-y-10 md:translate-y-10">
+        <figure>
+          <Image src={dfat} alt="DFAT — modern art project" loading="lazy" decoding="async" />
+          <figcaption class="sr-only">DFAT — modern art project</figcaption>
+        </figure>
+        <figure>
+          <Image src={mapsquare} alt="Mapsquare — modern art project" loading="lazy" decoding="async" />
+          <figcaption class="sr-only">Mapsquare — modern art project</figcaption>
+        </figure>
+        <figure>
+          <Image src={cvgt} alt="CVGT — modern art project" loading="lazy" decoding="async" />
+          <figcaption class="sr-only">CVGT — modern art project</figcaption>
+        </figure>
+      </article>
+    </li>
+
+    <li>
+      <article class="flex flex-col gap-10 -translate-y-10 md:-translate-y-10">
+        <figure>
+          <Image src={oxfam} alt="Oxfam — modern art project" loading="lazy" decoding="async" />
+          <figcaption class="sr-only">Oxfam — modern art project</figcaption>
+        </figure>
+        <figure>
+          <Image src={rwhsquare} alt="RWH Square — modern art project" loading="lazy" decoding="async" />
+          <figcaption class="sr-only">RWH Square — modern art project</figcaption>
+        </figure>
+        <figure>
+          <Image src={whps} alt="WHPS — modern art project" loading="lazy" decoding="async" />
+          <figcaption class="sr-only">WHPS — modern art project</figcaption>
+        </figure>
+      </article>
+    </li>
+
+    <li>
+      <article class="flex flex-col gap-10 translate-y-10 md:translate-y-10">
+        <figure>
+          <Image src={adersquare} alt="Ader Square — modern art project" loading="lazy" decoding="async" />
+          <figcaption class="sr-only">Ader Square — modern art project</figcaption>
+        </figure>
+        <figure>
+          <Image src={bluegreen} alt="Bluegreen — modern art project" loading="lazy" decoding="async" />
+          <figcaption class="sr-only">Bluegreen — modern art project</figcaption>
+        </figure>
+        <figure>
+          <Image src={uatp} alt="Unwrapped animated thumbnail poster — modern art project" loading="lazy" decoding="async" />
+          <figcaption class="sr-only">Unwrapped animated thumbnail poster — modern art project</figcaption>
+        </figure>
+      </article>
+    </li>
+
+    <li>
+      <article class="flex flex-col gap-10 -translate-y-10 md:-translate-y-10">
+        <figure>
+          <Image src={dropbottle} alt="Dropbottle — modern art project" loading="lazy" decoding="async" />
+          <figcaption class="sr-only">Dropbottle — modern art project</figcaption>
+        </figure>
+        <figure>
+          <Image src={edo} alt="Elephant — modern art project" loading="lazy" decoding="async" />
+          <figcaption class="sr-only">Elephant — modern art project</figcaption>
+        </figure>
+        <figure>
+          <Image src={keyinsights} alt="Key Insights — modern art project" loading="lazy" decoding="async" />
+          <figcaption class="sr-only">Key Insights — modern art project</figcaption>
+        </figure>
+      </article>
+    </li>
+  </ul>
+
+  <!-- Structured Data for Portfolio -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Portfolio Gallery",
+    "hasPart": [
+      { "@type": "CreativeWork", "name": "DFAT — modern art project" },
+      { "@type": "CreativeWork", "name": "Mapsquare — modern art project" },
+      { "@type": "CreativeWork", "name": "CVGT — modern art project" },
+      { "@type": "CreativeWork", "name": "Oxfam — modern art project" },
+      { "@type": "CreativeWork", "name": "RWH Square — modern art project" },
+      { "@type": "CreativeWork", "name": "WHPS — modern art project" },
+      { "@type": "CreativeWork", "name": "Ader Square — modern art project" },
+      { "@type": "CreativeWork", "name": "Bluegreen — modern art project" },
+      { "@type": "CreativeWork", "name": "Unwrapped animated thumbnail poster — modern art project" },
+      { "@type": "CreativeWork", "name": "Dropbottle — modern art project" },
+      { "@type": "CreativeWork", "name": "Elephant — modern art project" },
+      { "@type": "CreativeWork", "name": "Key Insights — modern art project" }
+    ]
+  }
+  </script>
+</section>
+

@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import circooles from "@/assets/images/logos/circooles.svg";
+import quotient from "@/assets/images/logos/quotient.svg";
+import layers from "@/assets/images/logos/layers.svg";
+import hourglass from "@/assets/images/logos/hourglass.svg";
+import commandr from "@/assets/images/logos/command-r.svg";
+---
+<aside
+  class="mb-30 trusted-by"
+  aria-labelledby="trusted-by-title"
+>
+  <h2 id="trusted-by-title" class="sr-only">
+    Trusted by leading companies
+  </h2>
+
+  <ul
+    class="flex flex-col md:flex-row gap-6 items-center justify-center rounded-md bg-[var(--dark-2)] p-4"
+  >
+    <li>
+      <Image src={circooles} alt="Circooles" loading="lazy" decoding="async" />
+    </li>
+    <li>
+      <Image src={quotient} alt="Quotient" loading="lazy" decoding="async" />
+    </li>
+    <li>
+      <Image src={layers} alt="Layers" loading="lazy" decoding="async" />
+    </li>
+    <li>
+      <Image src={hourglass} alt="Hourglass" loading="lazy" decoding="async" />
+    </li>
+    <li>
+      <Image src={commandr} alt="Command R" loading="lazy" decoding="async" />
+    </li>
+  </ul>
+
+  <!-- Structured Data: Trusted Brands -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Trusted by leading companies",
+    "brand": [
+      { "@type": "Organization", "name": "Circooles" },
+      { "@type": "Organization", "name": "Quotient" },
+      { "@type": "Organization", "name": "Layers" },
+      { "@type": "Organization", "name": "Hourglass" },
+      { "@type": "Organization", "name": "Command R" }
+    ]
+  }
+  </script>
+</aside>
+
+<script>
+  import { revealTrusted } from '@/assets/js/animations';
+  revealTrusted();
+</script>
+

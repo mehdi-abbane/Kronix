@@ -1,0 +1,133 @@
+---
+import MainButton from "../../ui/MainButton.astro";
+import Image from "astro/components/Image.astro";
+import step1 from '@/assets/images/step-1.svg';
+import step2 from '@/assets/images/step-2.svg';
+import step3 from '@/assets/images/step-3.svg';
+---
+<section
+  class="process flex flex-col gap-4"
+  aria-labelledby="process-title"
+>
+  <header class="flex flex-col gap-3 md:flex-row mb-20">
+    <div class="md:flex-1">
+      <p class="small-tag text-sm font-semibold text-lime-400">
+        How we work
+      </p>
+
+      <h2
+        id="process-title"
+        class="text-white text-3xl md:text-5xl font-bold"
+      >
+        Get a dedicated design <br />
+        team at a fraction of the <br />
+        cost.
+      </h2>
+    </div>
+
+    <div class="content flex flex-col flex-1">
+      <p class="text-gray-200 text-xl mb-10">
+        Grow your brand with high-quality design for a flat monthly fee.
+        <br />
+        Work with senior designers.
+        <br />
+        Subscribe and make as many requests as you need — no limits.
+      </p>
+
+      <nav aria-label="Pricing">
+        <MainButton href="/pricing" class="inline-block w-fit">
+          See pricing
+        </MainButton>
+      </nav>
+    </div>
+  </header>
+
+  <ol class="process-items flex flex-col md:flex-row gap-5">
+    <li>
+      <Image
+        class="mb-5"
+        src={step1}
+        alt="Subscribe and get started"
+        loading="lazy"
+        decoding="async"
+      />
+      <h3 class="text-white text-3xl mb-5 font-bold">
+        Subscribe & get started
+      </h3>
+      <p class="text-gray-200">
+        Submit as many design tasks as you need without worrying about individual project fees.
+      </p>
+    </li>
+
+    <li>
+      <Image
+        class="mb-5"
+        src={step2}
+        alt="Polished designs delivered on time"
+        loading="lazy"
+        decoding="async"
+      />
+      <h3 class="text-white text-3xl mb-5 font-bold">
+        Polished designs — on time
+      </h3>
+      <p class="text-gray-200">
+        Our designers get to work to deliver your request. Receive your design within a few days.
+      </p>
+    </li>
+
+    <li>
+      <Image
+        class="mb-5"
+        src={step3}
+        alt="Revisions made simple"
+        loading="lazy"
+        decoding="async"
+      />
+      <h3 class="text-white text-3xl mb-5 font-bold">
+        Revisions made simple
+      </h3>
+      <p class="text-gray-200">
+        Custom designs, prompt replies, and as many revisions as you need.
+      </p>
+    </li>
+  </ol>
+
+  <!-- Structured Data for Process Steps -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Design Service Process",
+    "description": "Step-by-step process for working with our design team.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Subscribe & get started",
+        "image": "STEP1_IMAGE_URL",
+        "text": "Submit as many design tasks as you need without worrying about individual project fees."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Polished designs — on time",
+        "image": "STEP2_IMAGE_URL",
+        "text": "Our designers get to work to deliver your request. Receive your design within a few days."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Revisions made simple",
+        "image": "STEP3_IMAGE_URL",
+        "text": "Custom designs, prompt replies, and as many revisions as you need."
+      }
+    ]
+  }
+  </script>
+</section>
+
+<script>
+  import { revealProcess } from '@/assets/js/animations';
+  revealProcess();
+</script>
+
