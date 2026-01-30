@@ -2,11 +2,10 @@
 import MainButton from '../../ui/MainButton.astro'
 ---
 
-  <ul id="services" class="flex flex-col md:flex-row gap-10 justify-center" role="list">
-    <!-- Plan 1: Standard -->
-    <li role="listitem">
+<ul id="services" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center max-w-7xl mx-auto" role="list">    <!-- Plan 1: Standard -->
+    <li role="listitem" class="pricing-card h-full">
       <article
-        class="bg-[var(--dark-2)] p-10 rounded-xl border border-lime-100"
+        class="bg-[var(--dark-2)] p-10 rounded-xl border border-lime-100 h-full flex flex-col"
         itemscope
         itemtype="https://schema.org/Product"
       >
@@ -57,9 +56,9 @@ import MainButton from '../../ui/MainButton.astro'
     </li>
 
     <!-- Plan 2: Growth -->
-    <li role="listitem">
+    <li role="listitem" class="pricing-card h-full">
       <article
-        class="bg-[var(--dark-2)] p-10 rounded-xl border border-lime-100 pricing-card-2 relative"
+        class="bg-[var(--dark-2)] p-10 rounded-xl border border-lime-100 pricing-card-2 relative  h-full flex flex-col"
         itemscope
         itemtype="https://schema.org/Product"
       >
@@ -111,9 +110,9 @@ import MainButton from '../../ui/MainButton.astro'
     </li>
 
     <!-- Plan 3: Basic -->
-    <li role="listitem">
+    <li role="listitem" class="pricing-card h-full">
       <article
-        class="bg-[var(--dark-2)] p-10 rounded-xl border border-lime-100"
+        class="bg-[var(--dark-2)] p-10 rounded-xl border border-lime-100 h-full flex flex-col"
         itemscope
         itemtype="https://schema.org/Product"
       >
@@ -204,3 +203,8 @@ import MainButton from '../../ui/MainButton.astro'
 }
 </script>
 
+<script>
+import { animatePricingCards } from "../../../assets/js/animations";
+
+animatePricingCards()	
+</script>

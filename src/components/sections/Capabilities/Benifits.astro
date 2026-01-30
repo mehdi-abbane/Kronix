@@ -2,7 +2,7 @@
 import MainButton from "../../ui/MainButton.astro"
 ---
 
-<header class="flex flex-col gap-3 md:flex-row mb-20" aria-labelledby="benefits-title">
+<header class="capabilities-section flex flex-col gap-3 md:flex-row mb-20" aria-labelledby="benefits-title">
   <div class="md:flex-1">
     <p class="small-tag text-sm font-semibold text-lime-400">
       BENEFITS
@@ -39,6 +39,13 @@ import MainButton from "../../ui/MainButton.astro"
     "name": "Benefits Section",
     "description": "The design subscription that connects you to your dream team, helping brands scale design without staffing stress."
   }
+  
   </script>
+	  
 </header>
 
+<script>
+import { benefitsTitleAnimate } from "../../../assets/js/animations";
+
+	benefitsTitleAnimate()
+</script>
